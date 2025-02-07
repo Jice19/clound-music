@@ -1,0 +1,819 @@
+/* header栏 */
+.m-top{
+  height: 70px;
+  width: auto;
+  background: #242424;
+  border-bottom: 1px solid #000;
+}
+.m-top .wrap {
+  width: 1100px;
+  height: 70px;
+  margin: 0 auto;
+}
+/* 网易logo */
+.m-top .wrap .logo{
+    float: left;
+    width: 176px;
+    height: 69px;
+    background-repeat: no-repeat;
+    background-image: url('../images/logo.png');
+    background-position: 0px 13px;
+    background-size: 168px 42px;
+}
+/* 导航条 */
+.m-top .m-nav{
+  float: left;
+}
+.m-top .m-nav li{
+  float: left;
+  padding: 0 19px;
+  color: #ccc;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+}
+/* 我的音乐阴影 */
+.m-top .m-nav li.z-slt {
+  background: #000;
+  text-decoration: none;
+  color: #fff;
+}
+/* 鼠标放索引栏阴影 */
+.m-top .m-nav li:hover {
+  background: #000;
+  text-decoration: none;
+  color: #fff;
+}
+/* 音乐搜索框及小眼睛 */
+.m-top .music-search{
+    float: left;
+    width: 158px;
+    height: 32px;
+    margin-top: 19px;
+    background-position: 10px 10px;
+    background-color: #fff;
+    border-radius: 32px;
+    background-image: url('../images/小眼镜.png');
+    background-repeat:no-repeat;
+    background-size: 15px;
+}
+/* 输入框 */
+.m-top .music-search input.input-search{
+    width: 75%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #333;
+    margin:7px 0 0 26px;
+}
+/* 搜索框默认字，后续用js实现 */
+.music-search label{
+  display: block;
+    position: absolute;
+    top: 30px;
+    left: 1136px;
+    width: 90%;
+    color: #9b9b9b;
+    font-size: 12px;
+    cursor: text;
+}
+/* 创作者中心 */
+.center {
+  float: right;
+  width: 90px;
+  height: 32px;
+  margin: 1px -108px 0 22px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  font-size:11px;
+  border: 1px solid #4F4F4F;
+  background-position: 0 -140px;
+  line-height: 33px;
+  color: #ccc;
+  border-radius: 20px;
+}
+/* 登录 */
+.m-top .wrap .header-login a{
+  position: absolute;
+    font-size: 12px;
+    top: 30px;
+    right: 267px;
+    color: #787878;
+}
+.m-top .wrap .header-login a:hover{
+  color:#666;
+}
+
+/* 红色副导航栏 */
+.redNav{
+    height: 35px;
+    box-sizing: border-box;
+    background-color: #C20C0C;
+    border-bottom: 1px solid #a40011;
+}
+.redNav .wrap{
+  width: 1100px;
+  height: 34px;
+  margin: 0 auto;
+}
+.redNav .wrap ul{
+  padding-left: 180px;
+}
+.redNav .wrap ul em{
+  height: 20px;
+  padding: 5px 7px;
+}
+.redNav .wrap ul li {
+  float: left;
+  color: #fff;
+  font-size: 12px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 13px;
+  margin: 0px 17px 0;
+  border-radius: 20px;
+}
+.redNav .wrap ul li:hover em{
+  background: #9b0909;
+  height: 20px;
+  padding: 5px 7px;
+  border-radius: 20px;
+}
+.redNav .wrap ul li em.emBg{
+  background: #9b0909;
+  height: 20px;
+  padding: 5px 7px;
+  border-radius: 20px;
+}
+
+/* 轮播图  */
+.slider-Wrap {
+  height: 285px;
+  background-image: url('../images/轮播图3背景.JPG') ;
+  background-size: 6000px;
+}
+.slider-Wrap .wrap{
+  /* 子绝父相：下载板块采用绝对定位 */
+  position: relative;
+  width: 982px;
+  height: 285px;
+  margin: 0 auto;
+}
+.slider-Wrap .wrap img{
+  width: 730px;
+  cursor: pointer;
+}
+/* 下载客户端 */
+.download{
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 254px;
+  height: 285px;
+  background: url('../images/轮播图右侧.png'),no-repeat;
+}
+/* 按钮 */
+a.downloadBtn{
+  display: block;
+  width: 215px;
+  height: 56px;
+  margin:186px 0 0 19px;
+  opacity: 0.5;
+  transition: background-color 0.3s ease;
+}
+a.downloadBtn:hover{
+  background-color: #0056b3;
+  opacity: 0.1;
+}
+
+/* 轮播图下面的点 */
+.sliderDot{
+  width: 730px;
+  height: 20px;
+  position: absolute;
+  top: 259px;
+  left: 0;
+  text-align: center;
+}
+/* 轮播图小点 开始 */
+.sliderDot  a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../images/轮播图小点精灵图.png');
+  background-repeat: no-repeat;
+  background-position: 3px -343px;
+  cursor: pointer;
+}
+
+.sliderDot a.hover{
+  background-position: -15px -343px;
+}
+.sliderDot  a.active{
+  background-position: -15px -343px;
+}
+/* 轮播图小点 结束 */
+/* 轮播图左右开始 */
+.slider-Wrap .wrap .leftBtn{
+    left: -68px;
+    background-position: 0 -360px;
+    background-image: url('../images/轮播图小点精灵图.png');
+  }
+.slider-Wrap .wrap .rightBtn{
+  right: -68px;
+  background-position: 0 -508px;
+  background-image: url('../images/轮播图小点精灵图.png');
+}
+.leftBtn ,.rightBtn{
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+  width: 37px;
+  height: 63px;
+}
+/* 轮播图左右结束*/
+
+/* 页面主体  */
+.mainWrap {
+  min-width: 982px;
+  height: 1414px;
+  background-color: #f5f5f5;
+}
+/* 中间部分页面 */
+.midWrap{
+  width: 980px;
+  min-height: 1414px;
+  margin: 0 auto;
+  border: 1px solid #d3d3d3;
+  border-width: 0 1px;
+  background: #fff;
+}
+/* 左边容器 */
+.midWrap .leftWrap{
+  float: left;
+  width: 725px;
+  height: 1414px;
+  overflow: hidden;
+  border-right: 1px solid #d3d3d3;
+}
+/* 热门推荐 */
+.midWrap .leftWrap .hotMusic{
+  margin:20px 20px 0 20px;
+  height: 33px;
+  padding: 0 10px 0 34px;
+  background-image: url('../images/热门推荐小圆点.png');
+  background-position: -225px -156px;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #c10d0c;
+}
+.hotMusic a.rmtj-title{
+  float: left;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+  color: #000;
+}
+/* 热门推荐右侧导航 */
+.rmtj-nav{
+  float: left;
+  margin: 7px 0 0 20px;
+}
+.rmtj-nav a.rmtj-a{
+  font-size: 12px;
+  color: #666;
+}
+.rmtj-nav a.rmtj-a:hover{
+  text-decoration: underline;
+}
+.rmtj-nav span.line{
+  margin: 0 10px;
+  color: #ccc;
+}
+/* 热门推荐 更多 */
+.more{
+  float: right;
+  margin:12px 0 0 0;
+  color: #666;
+  font-size: 12px;
+  padding: 0 12px 0 0;
+  background-image: url('../images/热门推荐小圆点.png');
+  background-position:25px -240px;
+}
+/* 热门推荐 歌曲列表 */
+.rmtj-content{
+ width: 700px;
+ height: 453px;
+ overflow: hidden;
+ margin-top: 20px;
+}
+.rmtj-content li{
+  float: left;
+  width: 130px;
+  height: 204px;
+  margin: 0 0 30px 42px;
+}
+/* 热门推荐  一个歌曲 */
+.cover{
+  /* 子绝父相*/
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+.cover img{
+  width: 140px;
+  height: 140px;
+  cursor: pointer;
+}
+.cover .bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 27px;
+  background-image: url('../images/封面上小阴影.png');
+  background-position: 0 -537px;
+  background-repeat: no-repeat;
+  color: #ccc;
+}
+/* 封面播放图标 */
+.cover .bottom a.icon-play{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 16px;
+    height: 17px;
+    background-image: url('../images/封面播放图标.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.cover .bottom a.icon-play:hover{
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  width: 16px;
+  height: 17px;
+  background-image: url('../images/封面播放图标.png');
+  background-position: 0 -60px;
+  background-repeat: no-repeat;
+}
+/* 封面播放数据 */
+.cover .bottom .playNumber{
+  font-size: 12px;
+  color: #ccc;
+  float: left;
+  margin: 9px 0 0 0;
+}
+/* 封面耳机图标 */
+.cover .bottom .icon-head{
+  float: left;
+  width: 14px;
+  height: 11px;
+  background-image: url('../images/封面播放图标.png');
+  background-position: 0 -24px;
+  margin: 9px 5px 9px 10px;
+  background-repeat: no-repeat;
+}
+.rmtj-content li p.musicContent{
+  margin: 8px 0 3px;
+  font-size: 14px;
+}
+
+/* 新碟上架 */
+.xdsj-wrap{
+  /* 子绝父相 */
+  position: relative;
+  height: 186px;
+  background-color:#f5f5f5;
+  margin: 20px 20px 37px 20px;
+  border: 1px solid #d3d3d3;
+}
+/* 新碟上架 轮播图左右按钮 */
+.xdsj-wrap a.leftBtn{
+  display: block;
+  position: absolute;
+  top: 105px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+  background-position:-260px -75px;
+  background-image: url('../images/新碟上架左右按钮.png');
+  background-repeat: no-repeat;
+}
+.xdsj-wrap a.rightBtn{
+  display: block;
+  position: absolute;
+  top: 105px;
+  right: 4px;
+  width: 17px;
+  height: 17px;
+  background-position:-300px -75px;
+  background-image: url('../images/新碟上架左右按钮.png');
+  background-repeat: no-repeat;
+}
+/* 新碟上架 轮播图容器 */
+.xdsj-wrap .rollWrap{
+  position: relative;
+  width: 645px;
+  height: 148px;
+  margin: 21px auto 0 auto;
+}
+.xdsj-wrap .rollWrap ul.box1{
+  display: none;
+  position: absolute;
+  float: left;
+  width: 645px;
+  height: 150px;
+}
+.xdsj-wrap .rollWrap ul.box2{
+  display: block;
+  position: absolute;
+  float: left;
+  width: 645px;
+  height: 150px;
+}
+.xdsj-wrap .rollWrap ul li{
+  float: left;
+  width: 117px;
+  height: 150px;
+  margin-left: 10px;
+  margin-top: auto;
+  overflow: hidden;
+  background-image: url('../images/新碟上架左右按钮.png');
+  background-position: -260px 100px;
+  background-repeat: no-repeat;
+}
+/* 唱片封面图片 */
+.xdsj-wrap .rollWrap ul li .cover-image{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px 0 0 0;
+}
+/* 新碟上架封面盘 */
+.xdsj-wrap .rollWrap .cover-image a.cover-bgi{
+  position: absolute;
+  display: block;
+  width: 118px;
+  height: 100px;
+  background-position: 0 -570px;
+  background-image: url('../images/封面上小阴影.png');
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+/* 专辑上面的播放图标按钮 */
+.xdsj-wrap .rollWrap ul li .cover-image .cover-play{
+  position: absolute;
+  z-index: 6;
+  right: 10px;
+  bottom: 5px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../images/封面播放图标.png');
+  background-position:0 -85px ;
+  background-repeat: no-repeat;
+  display: none;
+}
+.xdsj-wrap .rollWrap ul li:hover .cover-image .cover-play{
+  display: block;
+}
+/*歌曲名 */
+.xdsj-wrap a.music-name {
+  font-size: 12px;
+  color: #000;
+}
+.xdsj-wrap a.music-name:hover{
+  text-decoration: underline;
+}
+.xdsj-wrap a.music-singer{
+  font-size: 12px;
+  color: #000;
+}
+.xdsj-wrap a.music-singer:hover{
+  text-decoration: underline;
+}
+
+/* 榜单容器 */
+.bangList{
+  height: 472px;
+  margin: 20px 20px 0 15px;
+  background:url('../images/榜单背景.png') no-repeat;
+
+}
+/* 飙升榜 */
+.bangList-left{
+  float: left;
+  width: 230px;
+}
+.bangList-left  dt{
+  position: relative;
+  height: 100px;
+  padding: 20px 0 0 20px;
+}
+.bangList-left  dt img {
+  width: 80px;
+  height: 80px;
+}
+.bangList-left  dt a.bangList-leftMsk{
+  position: absolute;
+  left: 20px;
+  top: 21px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url('../images/封面上小阴影.png');
+  background-position: -145px -57px;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+.bangList-left  dt a.subTitle{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  z-index: 5;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+}
+.bangList-left  dt a.subTitle2{
+  position: absolute;
+  left:108px ;
+  top: 53px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../images/热门推荐小圆点.png');
+  background-position: -267px -205px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+.bangList-left  dt a.subTitle3{
+  position: absolute;
+  left:140px;
+  top: 53px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../images/热门推荐小圆点.png');
+  background-position: -300px -205px;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+.bangList-left dd ul.songList{
+  height: 319px;
+
+}
+ul.songList li{
+  height: 32px;
+  line-height: 32px;
+}
+ul.songList li span{
+  width: 35px;
+  height: 32px;
+  font-size: 16px;
+  text-align: center;
+  float: left;
+  color: #c10d0c;
+  display: block;
+}
+ul.songList li a{
+  position: relative;
+  width: 170px;
+  height: 32px;
+  float: left;
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
+}
+ul.songList  li a:hover{
+  text-decoration: underline;
+}
+.hotMore{
+  clear: both;
+  height: 32px;
+  text-align: right;
+  left: 32px;
+  font-size: 12px;
+  color: #333;
+  margin-right: 32px;
+  line-height: 32px;
+}
+.hotMore a:hover{
+  text-decoration: underline;
+}
+/* 右边容器 */
+.midWrap .rightWrap{
+  float: right;
+  width: 254px;
+  height: 1414px;
+  overflow: hidden;
+}
+.rightWrap  .userLogin{
+  height: 126px;
+  background-image: url('../images/热门推荐小圆点.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.rightWrap  .userLogin p{
+  width: 205px;
+  margin: auto;
+  padding: 16px 0;
+  line-height: 22px;
+  font-size: 12px;
+  color: #666;
+}
+
+.userLogin a.login-a{
+  width: 100px;
+  height: 31px;
+  display: block;
+  text-align: center;
+  line-height: 31px;
+  color: #fff;
+  text-shadow: 0 1px 0 #8a060b;
+  margin: 0 auto;
+  font-size: 12px;
+  background-image: url('../images/热门推荐小圆点.png');
+  background-position: 0 -195px;
+  background-repeat: no-repeat;
+}
+.userLogin a.login-a:hover{
+  text-decoration: underline;
+}
+
+.rightWrap .singerWrap{
+  margin-top: 15px;
+}
+.singerWrap h3{
+  height: 23px;
+  margin: 0 20px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+.singerWrap h3 a{
+  float: right;
+  font-size: 12px;
+  color: #666;
+}
+.singerWrap h3 a:hover{
+  text-decoration: underline;
+}
+.singerWrap ul{
+  overflow: hidden;
+  margin:6px 0 14px 20px
+}
+.singerWrap ul li{
+  margin-top: 14px;
+  width: 210px;
+  height: 62px;
+  background: #fafafa;
+  border: 1px solid #e9e9e9;
+}
+.singerImg{
+  width: 62px;
+  height: 62px;
+  float: left;
+}
+.singerImg img{
+  width: 62px;
+  height: 62px;
+}
+.singerInfo{
+  float: left;
+  width: 133px;
+  height: 60px;
+  padding-left: 14px;
+  padding-top: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.singerInfo span{
+  margin-top: 8px;
+  cursor: pointer;
+  width: 90%;
+  font-size: 14px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  color: #000;
+}
+.singerInfo p{
+  margin-top: 10px;
+  cursor: pointer;
+  width: 90%;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  color: #666;
+}
+.singerBtn{
+  margin: 0 20px;
+  height: 31px;
+  line-height: 31px;
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url('../images/申请背景.png');
+  background-repeat: no-repeat;
+  background-position:0 -59px ;
+}
+
+/* 热门主播 */
+
+.rightWrap .hotDj{
+  margin-top: 15px;
+}
+.hotDj h3{
+  height: 23px;
+  margin: 0 20px;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+.hotDj h3 a{
+  float: right;
+  font-size: 12px;
+  color: #666;
+}
+.hotDj h3 a:hover{
+  text-decoration: underline;
+}
+.hotDj ul{
+  overflow: hidden;
+  margin:6px 0 14px 20px
+}
+.hotDj ul li{
+  margin-top: 14px;
+  width: 210px;
+  height: 50px;
+}
+.djImg{
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.djImg img{
+  width: 40px;
+  height: 40px;
+}
+.djInfo{
+  float: left;
+  width: 133px;
+  height: 50px;
+  padding-left: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 21px;
+}
+.djInfo span{
+  cursor: pointer;
+  width: 90%;
+  font-size: 14px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  color: #000;
+}
+.djInfo p {
+  cursor: pointer;
+  width: 90%;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  color: #666;
+}
+
+/* 页面尾部 */
+.footWrap{
+  height: 172px;
+  overflow: hidden;
+  border-top: 1px solid #d3d3d3;
+  background: #f2f2f2;
+}
+
+/* 回到顶部按钮 */
+a.toTopBtn{
+  display: block;
+  position: fixed;
+  text-indent: -9999px;
+  width: 49px;
+  height: 44px;
+  bottom: 160px;
+  left: 50%;
+  margin-left: 500px;
+  background-image: url('../images/top按键精灵图.png');
+  background-position: -265px -47px;
+  background-repeat: no-repeat;
+  z-index: 9;
+}
+
+a.toTopBtn:hover{
+  background-image: url('../images/top按键精灵图.png');
+  background-position: -325px -47px;
+  background-repeat: no-repeat;
+}
+
+

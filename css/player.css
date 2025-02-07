@@ -1,0 +1,54 @@
+.playerBar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1002;
+  width: 100%;
+  height: 53px;
+  background-image: url('../images/底部播放背景.png');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+}
+.playerBar .wrap{
+  position: absolute;left: 50%;top: 6px;
+  width: 980px;height: 47px;margin-left: -498px;
+}
+/* 播放按钮 */
+.playerBar .wrap .btns{
+   float: left;
+   width: 137px;
+   padding-top: 6px;
+}
+.playerBar .wrap .btns a{
+float: left;
+width: 28px;
+height: 28px;
+margin: 5px 8px 0 0;
+background-image: url('../images/底部播放背景.png');
+background-repeat: repeat-x;
+text-indent: -9999px;
+}
+.btns a.prev{
+  background-position: 0 -130px;
+}
+.btns a.prev:hover{
+  background-position: -30px -130px;
+}
+.btns a.play{
+  width: 36px;
+  height: 36px;
+  margin-top: 0;
+  background-position: -3px -208px;
+}
+.btns a.play:hover{
+  width: 36px;
+  height: 36px;
+  margin-top: 0;
+  background-position: -43px -208px;
+}
+.btns a.next{
+  background-position: -80px -130px;
+}
+.btns a.next:hover{
+  background-position: -110px -130px;
+}

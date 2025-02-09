@@ -103,6 +103,21 @@
 .m-top .wrap .header-login a:hover{
   color:#666;
 }
+/* 登录后的头像 */
+.header-head{
+  position: relative;
+  float: right;
+  height: 45px;
+  margin: 19px -45px 0 20px;
+  padding: 0 22px 0 0;
+  display: none;
+}
+.header-head img{
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 
 /* 红色副导航栏 */
 .redNav{
@@ -610,6 +625,7 @@ ul.songList  li a:hover{
   overflow: hidden;
 }
 .rightWrap  .userLogin{
+  display: block;
   height: 126px;
   background-image: url('../images/热门推荐小圆点.png');
   background-position: 0 0;
@@ -622,6 +638,38 @@ ul.songList  li a:hover{
   line-height: 22px;
   font-size: 12px;
   color: #666;
+}
+/* 右边登录成功后信息 */
+.rightWrap .userMassage{
+  position: relative;
+  display: none;
+  height: 126px;
+  font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none
+}
+.rightWrap .userMassage a{
+  float: left;
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+    _margin-left: 10px;
+    padding: 2px;
+    background: #fff;
+    border: 1px solid #dadada;
+}
+.rightWrap .userMassage a img{
+  width: 80px;
+  height: 80px;
+  display: block;
+  cursor: pointer;
+}
+.rightWrap .userMassage .info{
+  font-size: 14px;
+  position: absolute;
+  left: 123px;
+  top: 17px;
 }
 
 .userLogin a.login-a{

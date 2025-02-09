@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="./JavaScript/form-serialize.js"></script>
+  
 </head>
 <body>
   <!-- header 开始-->
@@ -36,6 +41,10 @@
        <!-- 登录 -->
         <div class="header-login">
           <a href="#">登录</a>
+        </div>
+        <!--登录成功后的头像和昵称-->
+        <div class="header-head">
+          <img src="./images/cover1.jpg" alt="">
         </div>
     </div>
   </div>
@@ -241,6 +250,16 @@
             <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
             <a href="#" class="login-a">用户登录</a>
           </div>
+          <div class="userMassage">
+            <a href="">
+              <img src="./images/cover1.jpg" alt="">
+            </a>
+            <div class="info">
+              <h4 style="height: 20px;">
+                Jice19
+              </h4>
+            </div>
+          </div>
           <!-- 网易音乐人 -->
           <div class="singerWrap">
             <h3>
@@ -271,8 +290,7 @@
   <!--页面主题  结束-->
 
   <!-- 回到顶部按钮 -->
-   <a href="" class="toTopBtn"></a>
-
+   <a class="toTopBtn"></a>
 
   <!-- 页面尾部 -->
    <div class="footWrap">
@@ -289,8 +307,166 @@
             <a href="" title="播放/暂停" class="play">播放/暂停</a>
             <a href="" title="下一首（ctrl+➡" class="next">下一首</a>
             
+            
           </div>
+          <!-- 歌曲图片 -->
+          <div class="songHead">
+            <img src="./images/songHead.jpg" alt="">
+            <a href="" class="mask"></a>
+            </div>
+
+            <!-- 进度条和播放时间 -->
+             <div class="playWrap">
+              <div class="playInfo">
+                <a href="" title="11" class="ellipsis songName" >11</a>
+                <a href="" title="队长" class="singer" >队长</a>
+                <a href="" title="来自榜单" class="songSrc" ></a>
+              </div>
+              <!-- 进度条 -->
+              <div class="progressBar">
+                <!-- 进度条背景 -->
+                 <div class="barBg"></div>
+
+                 <!-- 当亲播放进度条 -->
+                  <div class="cur" style=" width: 19%;">
+                    <span class="btn"></span>
+                  </div>
+
+                  <!-- 歌曲播放时间 -->
+                   <div class="playTime">
+                    <em>01:22</em>/03:15
+                   </div>
+              </div>
+             </div>
+
+             <!-- 收藏、分享 -->
+              <div class="optWrap">
+                <a href="#" title="收藏" class="add"></a>
+                <a href="#" title="分享" class="share"></a>
+              </div>
+
+             <!-- /音量控制、循环方式、播放列表 -->
+              <div class="ctrlWrap">
+                <!-- 音量按键 -->
+                <a href="" class="volumnIcon" title="音量"></a>
+                <!-- 音量调节容器 -->
+                 <div class="columnWrap">
+                  <!-- 半透明背景 -->
+                   <div class="barBg"></div>
+                   <!-- 整个音量条 -->
+                    <div class="soundBg">
+                      <!-- 音量条  红色 -->
+                       <div class="currentVolumn" style="height: 65px;"></div>
+                      <!-- 音量调节小按钮 -->
+                        <div class="btn" style="top:22px"></div>
+                    </div>
+                 </div>
+                <!-- 循环方式 -->
+                <a href="" class="shuffleIcon"></a>
+                <!-- 歌单列表 -->
+                <a href="" class="listIcon"></a>
+              </div>
        </div>
     </div>
+    <!-- 底部播放器结束 -->
+
+
+    <!-- 登录弹窗 -->
+  <form class="login-overlay">
+    <div class="login-box">
+      <!-- 登录表单内容 -->
+       <!-- 登录框上部  开始 -->
+       <div class="loginTop">
+        手机号登录
+        <i class="login-x">x</i>
+       <!-- 登录框上部  结束 -->
+
+       <!-- 登录框内容 -->
+        <div class="contentWrap">
+          <!-- 输入手机号部分 -->
+          <div class="phone">
+            <!-- 左侧+86 -->
+            <div class="leftPhone">
+              <em>+86</em>
+              <label class="phoneNumber"></label>
+            </div>
+            <input type="tel" spellcheck="false" tabindex="1" autocomplete="off"
+             class="inputPhoneNumber" name="email"
+             placeholder="请输入手机号" id="phone" maxlength="11">
+          </div>
+
+
+          <!-- 获取验证码部分 -->
+          <div class="code">
+            <!-- 左侧输入验证码 -->
+            <div class="leftCode">
+              <label class="codeNumber"></label>
+            </div>
+            <input type="tel" autocomplete="off" spellcheck="false" tabindex="5" 
+            maxlength="6" data-max-length="6" class="inputCodeNumber" 
+            name="phonecode" placeholder="请输入密码" id="code">
+          </div>
+          <!-- 获取验证码部分结束 -->
+
+           <!-- 登录按钮 -->
+            <div class="login-Btn">登录</div>
+        </div>
+        <!-- 登录框内容 结束 -->
+       </div>
+    </div>
+  </form>
+
+  <!-- 划过头像 出现的前往主页和退出登录的盒子 -->
+  <div class="underHeaderWrap">
+    <a href="javascript:;">我的主页</a>
+    <a href="">退出登录</a>
+  </div>
+  
+  <script>
+    // 定义默认的手机号和密码数据
+    const validCredentials = {
+        '123456789': '123456'
+    };
+    // 获取登录按钮元素
+    const loginBtn3 = document.querySelector('.login-Btn');
+    // 为登录按钮添加点击事件监听器
+    loginBtn3.addEventListener('click', function () {
+        // 获取用户输入的手机号和密码
+        const loginPage = document.querySelector('.login-overlay');
+        const phone = document.getElementById('phone').value;
+        const code = document.getElementById('code').value;
+        // 获取顶部的登录页
+        const headerLogin = document.querySelector('.header-login a')
+        // 获取顶部的头像区域
+        const header= document.querySelector('.header-head')
+        // 获取中间的登录区域
+        const midLogin=document.querySelector('.userLogin')
+        // 获取中间用户信息
+        const userMassage = document.querySelector('.userMassage')
+        // 验证手机号和密码
+        if (validCredentials[phone] && validCredentials[phone] === code) {
+            alert('登录成功');
+            loginPage.style.display = 'none';
+            header.style.display='block'
+            midLogin.style.display='none'
+            userMassage.style.display='block'
+            headerLogin.style.display='none'
+        } else {
+            alert('请输入正确的手机号或密码');
+        }
+    });
+
+    const headerImg = document.querySelector('.header-head img' )
+    const redNav=document.querySelector('.redNav')
+    const underHeaderWrap=document.querySelector('.underHeaderWrap')
+    headerImg.addEventListener('mouseover',()=>{
+      underHeaderWrap.style.display='block'
+    })
+    redNav.addEventListener('mouseleave',()=>{
+      underHeaderWrap.style.display='none'
+    })
+</script>
+  <script src="./JavaScript/登录界面相关.js"></script>
+  <script src="./JavaScript/backTop.js"></script>
 </body>
 </html>

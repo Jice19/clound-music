@@ -52,3 +52,264 @@ text-indent: -9999px;
 .btns a.next:hover{
   background-position: -110px -130px;
 }
+.songHead{
+  width: 34px;
+  height: 34px;
+  position: relative;
+  margin: 6px 15px 0 0;
+  float: left;
+}
+.songHead img {
+  width: 34px;
+  height: 34px;
+}
+
+.playWrap{
+  width: 581px;
+  float: left;
+
+}
+.playWrap .playInfo{
+  height: 28px;
+  overflow: hidden;
+  color: #e8e8e8;
+  text-shadow: 0 1px 0 #171717;
+  line-height: 28px;
+}
+/* 省略号 */
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.playInfo a.songName{
+  max-width: 300px;
+  color: #e8e8e8;
+  float: left;
+  font-size: 13px;
+}
+.playInfo a.singer{
+  float: left;
+  min-width: 220px;
+  margin-left: 15px;
+  color: #9b9b9b;
+  font-size: 11px;
+}
+.playInfo a.songSrc{
+float: left;
+width: 14px;
+height: 15px;
+margin: 7px 0 0 -180px;
+background-image: url('../images/底部播放背景.png');
+background-repeat: no-repeat;
+background-position: -110px -104px;
+}
+
+/* 进度条 */
+.progressBar{
+  position: relative;
+  width: 466px;
+  height: 9px;
+  background-image: url('../images/三态进度条.png');
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+.progressBar .cur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9px;
+  background-image: url('../images/三态进度条.png');
+  background-repeat: no-repeat;
+  background-position: left -66px;
+}
+.progressBar .cur .btn{
+  position: absolute;
+  top: -7px;
+  right: -13px;
+  width: 22px;
+  height: 24px;
+  background-image: url('../images/播放器小红点.png');
+  background-repeat: no-repeat;
+  background-position: 0 -250px;
+}
+.progressBar .cur .btn:hover{
+  position: absolute;
+  top: -7px;
+  right: -13px;
+  width: 22px;
+  height: 24px;
+  background-image: url('../images/播放器小红点.png');
+  background-repeat: no-repeat;
+  background-position: 0 -280px;
+}
+/* 播放时间 */
+.playTime{
+  position: absolute;
+  top: -3px;
+  right: -84px;
+  color: #797979;
+  font-size: 12px ;
+}
+.playTime em{
+  color: #a1a1a1;
+}
+/* 收藏、分享 */
+.optWrap{
+  width: 60px;
+  float: left;
+  font-size: 12px;
+}
+.optWrap a.add{
+  float: left;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -93px -160px;
+}
+.optWrap a.add:hover{
+  float: left;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -93px -186px;
+}
+.optWrap a.share{
+  float: left;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -118px -160px;
+  padding-left: 10px;
+}
+.optWrap a.share:hover{
+  float: left;
+  width: 25px;
+  height: 25px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -118px -186px;
+  padding-left: 10px;
+}
+.ctrlWrap{
+  position: relative;
+  z-index: 10;
+  width: 113px;
+  padding-left: 13px;
+  height: 25px;
+  float: left;
+}
+.ctrlWrap .volumnIcon{
+  float: left;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -2px -244px;
+  background-repeat: no-repeat;
+}
+.ctrlWrap .volumnIcon:hover{
+  float: left;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -31px -244px;
+  background-repeat: no-repeat;
+}
+.shuffleIcon{
+  float: left;
+  margin: 3px 0 0 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -66px -248px;
+  background-repeat: no-repeat;
+}
+.shuffleIcon:hover{
+  float: left;
+  margin: 3px 0 0 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -91px -248px;
+  background-repeat: no-repeat;
+}
+.listIcon{
+  display: block;
+  width: 38px;
+  height: 21px;
+  float: none;
+  background-position: -42px -68px;
+  line-height: 27px;
+  height: 25px;
+  text-align: center;
+  color: #666;
+  margin: 2px 0 0 51px;
+  background-image: url('../images/收藏、分享.png');
+  background-repeat: no-repeat;
+}
+.listIcon:hover{
+  display: block;
+  width: 38px;
+  height: 21px;
+  float: none;
+  background-position: -42px -98px;
+  line-height: 27px;
+  height: 25px;
+  text-align: center;
+  color: #666;
+  margin: 2px 0 0 51px;
+  background-image: url('../images/收藏、分享.png');
+  background-repeat: no-repeat;
+}
+/* 音量调节容器 */
+.columnWrap{
+  display: none;
+  width: 32px;
+  height: 113px;
+  position: absolute;
+  top: -113px;
+  left: 9px;
+}
+.columnWrap .barBg{
+  position: absolute;
+  width: 32px;
+  height: 113px;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.soundBg{
+  position: absolute;
+  top: 7px;
+  left: 14px;
+  width: 4px;
+  height: 93px;
+  padding: 4px 0;
+  background: #000;
+}
+.currentVolumn{
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  padding: 1px 0 0 0;
+  background-image: url('../images/收藏、分享.png');
+  background-position: -40px bottom;
+  background-repeat: no-repeat;
+}
+.columnWrap .btn{
+  position: absolute;
+  left: -7px;
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+  background-image: url('../images/播放器小红点.png');
+  background-position: -40px -250px;
+  background-repeat: no-repeat;
+}
